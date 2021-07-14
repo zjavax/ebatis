@@ -1,0 +1,17 @@
+server.port: 5601
+server.host: "172.21.245.94" # 内网
+elasticsearch.hosts: ["http://47.100.120.240:9200"]  #这里是elasticsearch的访问地址
+
+src/redis-server redis.conf
+
+
+本机ip
+183.195.89.236
+
+tar -zxvf kibana-X.X.X-linux-x86_64.tar.gz
+
+ps -ef | grep elastic
+
+
+cd /usr/local/es/elasticsearch-7.6.1/bin
+cd /usr/local/es/kibana-7.6.1-linux-x86_64/bin
