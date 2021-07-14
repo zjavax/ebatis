@@ -17,6 +17,11 @@ cd /usr/local/es/elasticsearch-7.6.1/bin
 cd /usr/local/es/kibana-7.6.1-linux-x86_64/bin
 
 
+
+service mysql start/stop
+./src/
+后台启动
+nohup  ./kibana & 
 ===
 nohup /usr/local/es/elasticsearch-7.6.1/bin/elasticsearch
 
