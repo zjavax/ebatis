@@ -47,7 +47,7 @@ public interface Cluster extends Closeable {
     }
 
     static Cluster localhost(int port) {
-        return simple("127.0.0.1", port);
+        return simple("47.100.120.240", port);
     }
 
     /**
