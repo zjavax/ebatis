@@ -1,7 +1,9 @@
 package com.example.ebatisspringsample;
 
 import com.example.ebatisspringsample.entity.RecentOrder;
+import com.example.ebatisspringsample.entity.RecentOrderModel;
 import com.example.ebatisspringsample.mapper.RecentOrderGetMapper;
+import com.example.ebatisspringsample.mapper.RecentOrderIndexMapper;
 import io.manbang.ebatis.core.cluster.Cluster;
 import io.manbang.ebatis.core.cluster.ClusterRouter;
 import io.manbang.ebatis.core.cluster.Credentials;
@@ -24,8 +26,12 @@ public class EbatisConfig {
 
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(EbatisConfig.class);
+        RecentOrderIndexMapper recentOrderIndexMapper = context.getBean(RecentOrderIndexMapper.class);
+        recentOrderIndexMapper.indexRecentOrderBool(new RecentOrderModel());
+
         RecentOrderGetMapper recentOrderGetMapper = context.getBean(RecentOrderGetMapper.class);
-        RecentOrder recentOrder = recentOrderGetMapper.getRecentOrder("4ggnXLTnQF2tQVh9U7H7fA");
-        System.out.println(recentOrder.getCargoId());
+        RecentOrder recentOrder = recentOrderGetMapper.getRecentOrder("10124512292666");
+
+        System.out.println("=====================" + recentOrder.getCargoId());
     }
 }
