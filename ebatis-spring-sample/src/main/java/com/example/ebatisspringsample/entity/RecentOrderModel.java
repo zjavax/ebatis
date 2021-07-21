@@ -1,4 +1,4 @@
-package io.manbang.ebatis.sample.entity;
+package com.example.ebatisspringsample.entity;
 
 import io.manbang.ebatis.core.annotation.Field;
 import io.manbang.ebatis.core.provider.IdProvider;

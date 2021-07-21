@@ -49,7 +49,7 @@ class DefaultMapperMethodMeta implements MapperMethod {
         this.indices = mapperInterface.getIndices();
         this.types = mapperInterface.getTypes();
 
-        this.requestType = getRequestType(method);
+        this.requestType = getRequestType(method);       // 核心
         this.resultType = getResultType(method);
 
         this.requestAnnotation = getAnnotation(requestType.getAnnotationClass());

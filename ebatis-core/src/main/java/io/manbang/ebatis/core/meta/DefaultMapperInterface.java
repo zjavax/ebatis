@@ -92,7 +92,7 @@ class DefaultMapperInterface implements MapperInterface {
     private Map<Method, MapperMethod> getMapperMethods(Class<?> mapperInterface) {
         Map<Method, MapperMethod> methods = Arrays.stream(mapperInterface.getDeclaredMethods())
                 .filter(this::filterMethod)
-                .map(m -> MapperMethod.of(this, m))
+                .map(m -> MapperMethod.of(this, m))  // of
                 .collect(Collectors.toMap(MethodMeta::getElement, m -> m));
 
         return Collections.unmodifiableMap(methods);

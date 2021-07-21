@@ -12,6 +12,7 @@ import io.manbang.ebatis.sample.cluster.SampleClusterRouterProvider;
 abstract class ESAbstractTest {
 
     protected <R> R createEsMapper(Class<R> mapperClass) {
+        // ClusterRouterProvider ？
         return MapperProxyFactory.getMapperProxy(mapperClass, SampleClusterRouterProvider.SAMPLE_CLUSTER_NAME);
     }
 
