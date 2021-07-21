@@ -8,7 +8,7 @@ import com.google.auto.service.AutoService;
  */
 @AutoService(ClusterRouterProvider.class)
 public class LocalhostClusterRouterProvider implements ClusterRouterProvider {
-    private static final String CLUSTER_ROUTER_NAME = "localhost";
+    private static final String CLUSTER_ROUTER_NAME = "47.100.120.240";
 
     @Override
     public ClusterRouter getClusterRouter(String name) {

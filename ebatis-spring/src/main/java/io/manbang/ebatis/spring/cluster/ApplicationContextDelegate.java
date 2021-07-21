@@ -24,6 +24,7 @@ class ApplicationContextDelegate {
         return Optional.ofNullable(CONTEXT_HOLDER.get()).map(context -> context.getBean(beanClass)).orElse(null);
     }
 
+    // 为甚这里明明调用了，却用快捷键不行
     static void setContext(ApplicationContext context) {
         ApplicationContextDelegate.CONTEXT_HOLDER.compareAndSet(null, context);
     }

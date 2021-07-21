@@ -4,11 +4,7 @@ import io.manbang.ebatis.spring.cluster.SpringClusterRouterProvider;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.annotation.AliasFor;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * 启用ebatis
@@ -18,6 +14,7 @@ import java.lang.annotation.Target;
 @Documented
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
+//@Import({EbatisAutoConfigure.class, EasyMapperRegistrar.class, SpringClusterRouterProvider.class})
 @Import({EasyMapperRegistrar.class, SpringClusterRouterProvider.class})
 public @interface EnableEasyMapper {
     /**
