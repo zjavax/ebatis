@@ -159,7 +159,7 @@ public enum RequestType {
 
     private static final Map<Class<? extends Annotation>, RequestType> ANNOTATION_EXECUTOR_TYPES;
 
-    static {
+    static {  // values
         ANNOTATION_EXECUTOR_TYPES = Stream.of(values()).collect(Collectors.toMap(RequestType::getAnnotationClass, t -> t));
     }
 

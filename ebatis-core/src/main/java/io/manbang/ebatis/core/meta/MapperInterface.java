@@ -17,7 +17,7 @@ public interface MapperInterface extends AnnotatedMeta<Class<?>> {
      * @return 接口映射信息
      */
     static <T> MapperInterface of(Class<T> mapperType) {
-        return new DefaultMapperInterface(mapperType);
+        return new DefaultMapperInterface(mapperType);  // 关注一下
     }
 
     /**

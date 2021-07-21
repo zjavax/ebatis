@@ -18,7 +18,7 @@ public interface MapperMethod extends MethodMeta {
      * @return mapper method
      */
     static MapperMethod of(MapperInterface mapperInterface, Method method) {
-        return new DefaultMapperMethodMeta(mapperInterface, method);
+        return new DefaultMapperMethodMeta(mapperInterface, method);  //
     }
 
     /**

@@ -71,7 +71,6 @@ public class ESGetTest extends ESAbstractTest {
     }
 
     @Test
-
     public void getRecentOrderCompletableFuture() throws ExecutionException, InterruptedException, JsonProcessingException {
         CompletableFuture<RecentOrder> recentOrder = recentOrderGetMapper.getRecentOrderCompletableFuture("10124512292666");
         String result = getJsonResult(recentOrder.get());

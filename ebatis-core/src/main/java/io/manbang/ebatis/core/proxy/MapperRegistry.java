@@ -17,6 +17,7 @@ import java.util.Map;
  * @since 2020/5/25 17:27
  */
 class MapperRegistry {
+    // 为什么这里使用HashMap
     private static final Map<Class<?>, Object> PROXIES = new HashMap<>();
 
     private MapperRegistry() {

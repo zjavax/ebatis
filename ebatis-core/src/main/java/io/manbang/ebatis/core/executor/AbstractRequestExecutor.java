@@ -38,7 +38,7 @@ public abstract class AbstractRequestExecutor<R extends ActionRequest> implement
         ResponseExtractor<?> extractor = meta.getResponseExtractor(args);
 
         ClusterSession session = ClusterSession.of(cluster);
-        CompletableFuture<?> future = getRequestAction(session).call(request, extractor);
+        CompletableFuture<?> future = getRequestAction(session).call(request, extractor); //
         return meta.getResultType().adaptResult(future);
     }
 
