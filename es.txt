@@ -1,6 +1,18 @@
+
+
+es	理解三者关系
+	高级client
+	Operations、template
+	jpaRepostory
+
+============
+
+
 server.port: 5601
 server.host: "172.21.245.94" # 内网
 elasticsearch.hosts: ["http://47.100.120.240:9200"]  #这里是elasticsearch的访问地址
+
+47.100.120.240
 
 src/redis-server redis.conf
 
@@ -33,3 +45,17 @@ REGION_ID=cn-shanghai VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-shanghai.oss-cn-shanghai-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 
 https://help.aliyun.com/knowledge_detail/38859.html
+
+
+===
+
+https://esdoc.bbossgroups.com/#/
+
+===  centos 
+
+yum remove wget
+ yum install -y wget
+ 
+ 执行以下命令找到elasticsearch-head的插件进程，然后使用kill  -9  杀死进程即可
+netstat -nltp | grep 9100
+kill -9 8328

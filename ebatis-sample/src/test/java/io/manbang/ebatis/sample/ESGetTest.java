@@ -18,7 +18,7 @@ import java.util.concurrent.ExecutionException;
  * @since 2020/6/29 10:53
  */
 @Slf4j
-public class ESGetTest extends ESAbstractTest {
+public class ESGetTest extends ESAbstractTest {        // AbstractRequestFactory
     private RecentOrderGetMapper recentOrderGetMapper;
 
     @Before

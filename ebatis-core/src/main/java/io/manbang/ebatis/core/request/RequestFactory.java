@@ -15,6 +15,7 @@ import org.elasticsearch.index.reindex.UpdateByQueryRequest;
 
 /**
  * # 请求工厂接口，根据请求的方法定义和实参，创建ES请求
+ * # 创建ES请求，根据注解对应创建不同的ES请求
  *
  * @author 章多亮
  * @since 2020/5/14 11:16

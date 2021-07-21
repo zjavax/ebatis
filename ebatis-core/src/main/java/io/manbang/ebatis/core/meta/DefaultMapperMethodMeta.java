@@ -122,7 +122,7 @@ class DefaultMapperMethodMeta implements MapperMethod {
     @Override
     public Object invoke(Cluster cluster, Object[] args) {
         try {
-            return requestExecutor.execute(cluster, this, args);
+            return requestExecutor.execute(cluster, this, args);   // 执行
         } catch (Exception e) {
             log.error("接口执行异常: {}", method, e);
             throw e;

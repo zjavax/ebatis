@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 @Documented
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Bulk {
+public @interface Bulk { // 批量写
     BulkType bulkType();
 
     String timeout() default "1m";

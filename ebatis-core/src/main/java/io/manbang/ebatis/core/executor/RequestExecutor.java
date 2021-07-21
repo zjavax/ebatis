@@ -8,7 +8,7 @@ import io.manbang.ebatis.core.meta.MethodMeta;
  * @since 2019/12/19 13:41
  */
 @FunctionalInterface
-public interface RequestExecutor {
+public interface RequestExecutor {  // 请求执行器，负责整个 Elasticsearch 请求的执行流程。
     /**
      * 获取搜索请求执行器
      *

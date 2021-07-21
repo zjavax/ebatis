@@ -51,7 +51,7 @@ class IndexRequestFactory extends AbstractRequestFactory<Index, IndexRequest> {
         ObjectMapper mapper = ObjectMapperHolder.objectMapper();
         byte[] source;
         try {
-            source = mapper.writeValueAsBytes(doc);
+            source = mapper.writeValueAsBytes(doc);  // 将对象转化为map 的一个工具类：BeanUtil.beanToMap(object) cn.hutool.core.bean.BeanUtil
         } catch (JsonProcessingException e) {
             log.error("条件转换成JSON字节数组异常：{}", doc, e);
             source = new byte[0];
