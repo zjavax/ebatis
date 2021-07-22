@@ -1,5 +1,6 @@
 package io.manbang.ebatis.spring.annotation;
 
+import io.manbang.ebatis.spring.cluster.EbatisAutoConfigure;
 import io.manbang.ebatis.spring.cluster.SpringClusterRouterProvider;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.annotation.AliasFor;
@@ -14,8 +15,8 @@ import java.lang.annotation.*;
 @Documented
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-//@Import({EbatisAutoConfigure.class, EasyMapperRegistrar.class, SpringClusterRouterProvider.class})
-@Import({EasyMapperRegistrar.class, SpringClusterRouterProvider.class})
+@Import({EbatisAutoConfigure.class, EasyMapperRegistrar.class, SpringClusterRouterProvider.class})
+//@Import({EasyMapperRegistrar.class, SpringClusterRouterProvider.class})
 public @interface EnableEasyMapper {
     /**
      * 获取需要扫描的包路径
